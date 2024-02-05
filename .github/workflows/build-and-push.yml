@@ -47,6 +47,6 @@ jobs:
                 cd docker
                 docker buildx build \
                 --platform linux/arm64,linux/amd64 \
-                -t ${{ env.GITHUB_REGISTRY }}/${{ github.repository_owner }}/demo-youtube-video:${{ github.sha }} \
+                -t ${{ env.GITHUB_REGISTRY }}/${{ github.repository_owner }}/app-backend:${{ github.sha }} \
                 -f Dockerfile \
                 --push .
